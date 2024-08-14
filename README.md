@@ -1,5 +1,5 @@
 # Parallax Scrolling Website
-
+this project is not completely made by me . most of the credit goes to another github repo
 Welcome to the Parallax Scrolling Website project! This project showcases an interactive and engaging website with a parallax scrolling effect. The website is designed using HTML5, CSS3, and JavaScript to create an immersive experience for users.
 
 [![Project Preview](https://drive.google.com/uc?id=1GFbBHTi7w8weRVqLJ7bkofezEEGg4U30)](https://parallax-website-by-vineet.netlify.app/)
