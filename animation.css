@@ -1,0 +1,401 @@
+/* Code for The Bubble Animation */
+
+.bubbles {
+	display: flex;
+	width: 100%;
+	justify-content: space-around;
+	position: absolute;
+	bottom: 0;
+
+	/* Default values for duration and y value (For Desktop) */
+	--transform-duration: 6s;
+	--transform-y: -300vh;
+}
+
+.bubbles img {
+	opacity: 0;
+	animation-name: bubble;
+	animation-timing-function: linear;
+	animation-duration: var(--transform-duration);
+	animation-iteration-count: infinite;
+}
+
+@keyframes bubble {
+	0% {
+		transform: translateY(0);
+		opacity: 0;
+	}
+
+	10% {
+		opacity: 1;
+	}
+
+	100% {
+		transform: translateY(var(--transform-y));
+		opacity: 1;
+	}
+}
+
+/* Delay for each bubble separately (Desktop View)*/
+.bubbles img:nth-child(1) {
+	animation-delay: 2s;
+}
+
+.bubbles img:nth-child(2) {
+	animation-delay: 5s;
+}
+
+.bubbles img:nth-child(3) {
+	animation-delay: 3s;
+}
+
+.bubbles img:nth-child(4) {
+	animation-delay: 6s;
+}
+
+.bubbles img:nth-child(5) {
+	animation-delay: 1s;
+}
+
+.bubbles img:nth-child(6) {
+	animation-delay: 4s;
+}
+
+.bubbles img:nth-child(7) {
+	animation-delay: 6s;
+}
+
+/* Delay for each bubble separately (Mobile View) */
+@media screen and (max-width: 650px) {
+	.bubbles img:nth-child(1) {
+		animation-delay: 0s;
+	}
+
+	.bubbles img:nth-child(2) {
+		animation-delay: 10s;
+	}
+
+	.bubbles img:nth-child(3) {
+		animation-delay: 6s;
+	}
+
+	.bubbles img:nth-child(4) {
+		animation-delay: 12s;
+	}
+
+	.bubbles img:nth-child(5) {
+		animation-delay: 2s;
+	}
+
+	.bubbles img:nth-child(6) {
+		animation-delay: 8s;
+	}
+
+	.bubbles img:nth-child(7) {
+		animation-delay: 13s;
+	}
+
+}
+
+
+
+/* Code for the Animation in Footer .... Social Media Icons */
+
+/* Properties for footer */
+.footer {
+	width: 100%;
+	background: #e6bb95;
+	text-align: center;
+	padding: 10px 0px;
+	color: black;
+}
+
+.footer span {
+	color: black;
+	padding: 10px 0px;
+}
+
+.wrapper {
+	margin: 5px;
+}
+
+.wrapper .social-media {
+	display: inline-block;
+	height: 50px;
+	width: 50px;
+	margin: 0 5px;
+	overflow: hidden;
+	background: #fff;
+	border-radius: 50px;
+	cursor: pointer;
+	box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
+	transition: all 0.3s ease-out;
+}
+
+.wrapper .social-media:hover {
+	width: 11rem;
+	text-align: left;
+}
+
+/* To rotate icon by 360 degree */
+.wrapper .social-media:hover i {
+	transform: rotate(360deg);
+}
+
+.wrapper .social-media .icon {
+	display: inline-block;
+	height: 50px;
+	width: 50px;
+	text-align: center;
+	border-radius: 50px;
+}
+
+.wrapper .social-media .icon i {
+	font-size: 25px;
+	line-height: 50px;
+	color: #fff;
+	transition-duration: 0.8s;
+	transition-property: transform;
+}
+
+/* Set Color for each Icon */
+.wrapper .social-media:nth-child(1) .icon {
+	background: radial-gradient(circle at 30% 140%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+}
+
+.wrapper .social-media:nth-child(2) .icon {
+	background: #0072b1;
+}
+
+.wrapper .social-media:nth-child(3) .icon {
+	background: #171515;
+}
+
+.wrapper .social-media:nth-child(4) .icon {
+	background: linear-gradient(to right, rgb(5, 117, 230), rgb(2, 27, 121));
+}
+
+.wrapper .social-media span {
+	font-size: 20px;
+	font-weight: 500;
+	margin-left: 10px;
+	transition: all 0.3s ease-out;
+}
+
+/* Set Color for each text */
+.wrapper .social-media:nth-child(1) span {
+	color: #E1306C;
+}
+
+.wrapper .social-media:nth-child(2) span {
+	color: #0072b1;
+}
+
+.wrapper .social-media:nth-child(3) span {
+	color: #171515;
+}
+
+.wrapper .social-media:nth-child(4) span {
+	color: #0d4db4;
+}
+
+/* To prevent animation in mobile view */
+@media screen and (max-width: 500px) {
+	.wrapper .social-media:hover {
+		width: 50px;
+	}
+}
+
+#text{
+	position: relative;
+	bottom: 100px;
+	font-style: italic;
+}
+.text1{
+	position: relative;
+	color: #0d4db4;
+	font-size: 30px;
+	font-weight: 600;
+}
+.first_text{
+	color: #d6249f;
+}
+.sec-text:before{
+	content: "";
+
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	background-color: red;
+	border-left: 2px solid black;
+	animation: animate 3s steps(9) infinite;
+}
+@keyframes animate{
+	40%,60%{
+		left:100%;
+	}
+	100%{
+		left: 0%;
+	}
+}
+
+#slider {
+    margin: auto;
+    width: 300px;
+    height: 450px;
+    margin-top: 100px;
+    position: relative;
+    /* overflow: hidden; */
+}
+
+#slider a {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0; /* Start with all images invisible */
+    animation: fade 24s infinite;
+}
+
+#slider a img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+	position: relative;
+	left: -18px;
+	top: -30px;
+	border-radius: 20px;
+}
+
+#slider a:nth-of-type(1) { animation-delay: 0s; }
+#slider a:nth-of-type(2) { animation-delay: 3s; }
+#slider a:nth-of-type(3) { animation-delay: 6s; }
+#slider a:nth-of-type(4) { animation-delay: 9s; }
+#slider a:nth-of-type(5) { animation-delay: 12s; }
+#slider a:nth-of-type(6) { animation-delay: 15s; }
+#slider a:nth-of-type(7) { animation-delay: 18s; }
+#slider a:nth-of-type(8) { animation-delay: 21s; }
+
+@keyframes fade {
+    0% { opacity: 1; }
+    10.5% { opacity: 1; }
+    25% { opacity: 0; }
+    100% { opacity: 0; }
+}
+
+.meet{
+	z-index: 00;
+}
+
+
+.matemasie-regular {
+	font-family: "Matemasie", sans-serif;
+	font-weight: 400;
+	font-style: normal;
+	text-decoration: none;
+	font-size: 3rem;
+	/* position: relative;
+	justify-content: center;
+	justify-items: center; */
+  }
+.btn{
+	padding: 10px;
+	color: #0b1d39;
+	background-color: white;
+	border-radius: 7px;
+	font-size: 2rem;
+	font-family: "Matemasie", sans-serif;
+	font-weight: 100;
+	position: relative;
+	left: 5rem;
+}
+.btn:hover{
+	background-color: #f2c5c5;
+	color: #010710;
+	font-weight: 200;
+}
+.btn1{
+	position: relative;
+	justify-content: center;
+	justify-items:center;
+}
+
+/* .overlay{
+	position: absolute;
+	height: 600px;
+	z-index: 100;
+	left: -150px;
+	opacity: 0.7;
+}
+.overlay2{
+	position: absolute;
+	height: 200px;
+	z-index: 100;
+	left: 170px;
+} */
+.rl{
+	position: relative;
+}
+.overlay{
+	position: absolute;
+	top: -40px;
+	left: -230px;
+	z-index: 100;
+	/* width: 100%; */
+	height: 700px;
+	opacity: 0;
+	transition: opacity 1s, transform 1s; /* Transition for opacity and rotation */
+	transform: rotate(0deg); /* Initial rotation */
+}
+.overlay2{
+	position: absolute;
+	top: 0;
+	left: 170px;
+	/* width: 100%; */
+	z-index: 100;
+	height: 200px;
+	opacity: 0;
+	transition: opacity 1s, transform 1s; /* Transition for opacity and rotation */
+	transform: rotate(270deg); /* Initial rotation */
+}
+.show {
+	opacity: 1;
+	transform: rotate(360deg); /* Rotate when showing */
+}
+
+.petals {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	pointer-events: none; /* Ensure petals do not interfere with interactions */
+}
+
+.petal {
+	position: absolute;
+	width: 30px; /* Adjust size as needed */
+	height: 30px; /* Adjust size as needed */
+	background: url('images/petal.png') no-repeat center center; /* Add petal image */
+	background-size: contain;
+	animation: petalMotion 5s infinite;
+}
+
+@keyframes petalMotion {
+	0% {
+		transform: translate(0, 0);
+	}
+	25% {
+		transform: translate(-50px, -50px) rotate(45deg);
+	}
+	50% {
+		transform: translate(0, -100px) rotate(90deg);
+	}
+	75% {
+		transform: translate(50px, -50px) rotate(135deg);
+	}
+	100% {
+		transform: translate(0, 0) rotate(180deg);
+	}
+}
